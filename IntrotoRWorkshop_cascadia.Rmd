@@ -289,6 +289,12 @@ vect1
 
 ```
 
+### 3. Write a function using the `celsius_to_kelvin` function to convert a user-input value from fahrenheit to kelvin
+```{r, echo=TRUE, eval=FALSE}
+
+
+```
+
 # 5. Working with the tidyverse {.unnumbered}
 
 Installing packages:
@@ -300,7 +306,7 @@ library(tidyverse)
 ```
 
 ## tidyverse grammar {.unnumbered}
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 beaver2 %>%
   filter(activ == 1) %>%
@@ -308,7 +314,16 @@ beaver2 %>%
 
 ```
 
-## ggplot2 graphing {.unnumbered}
+### 1. Use the tidyverse to pull out star wars characters taller than 100 units (`height`) and of those characters, count the different species (`species`)
+```{r, eval=FALSE, echo=TRUE}
+
+starwars %>%
+  filter(__________) %>%
+  count(______)
+
+```
+
+## ggplot2 graphing example {.unnumbered}
 
 ```{r, echo=TRUE}
 
