@@ -9,4 +9,4 @@ Go to https://rstudio-education.github.io/hopr/starting.html for more informatio
 ## Materials
 Navigate to the worksheet document: [IntrotoRWorkshop_cascadia.Rmd](IntrotoRWorkshop_cascadia.Rmd)
 
-Naviagte to the slide deck we'll use: 
+You may also download the slide deck we'll use: [Intro_to_R_cascadia_2026.pptx](Intro_to_R_cascadia_2026.pptx)
