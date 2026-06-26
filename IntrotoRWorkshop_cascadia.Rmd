@@ -165,12 +165,12 @@ Take a look at the documentation on the `beaver2` dataset in base R - note what 
 
 You can use the `head()` function to see the first 6 rows of the dataset. Each row in the dataset is a measurement of body temperature (the entire dataset is one individual beaver), and the columns correspond to the time (`day` and `time`) of data collection, the response (`temp`), and an additional potentially explanatory variable (`activ` - values are 0 (no activity outside retreat) or 1 (activity outside retreat)). 
 
-```{r, eval=TRUE, echo=TRUE}
+```{r, eval=FALSE, echo=TRUE}
 head(beaver2)
 ```
 
 Another few great exploratory functions for your dataset:
-```{r, eval=TRUE, echo=TRUE}
+```{r, eval=FALSE, echo=TRUE}
 str(beaver2) #"structure"
 summary(beaver2)
 ```
@@ -212,14 +212,14 @@ beaver_warm <-
 Visualizing our data can help us understand the structure even further. 
 
 ### 1. Histogram of body temperatures
-```{r}
+```{r, eval=FALSE, echo=TRUE}
 hist(beaver2$temp) 
 ```
 
 Now we'll use the `boxplot()` function to look at the spread of body temperatures (`temp`) by detected activity (`activ`). 
 
 ### 2. Replace the `y_value` and `x_value` elements with the appropriate column names
-```{r}
+```{r, eval=FALSE, echo=TRUE}
 boxplot(y_value ~ x_value, data = beaver2,
         xlab = "Activity (0 = none detected, 1 = detected)",
         ylab = "Temperature",
@@ -227,7 +227,7 @@ boxplot(y_value ~ x_value, data = beaver2,
 ```
 
 ### 3. At what time does the beaver reach its highest temperature? Why is the code below wrong?
-```{r, echo=TRUE}
+```{r, echo=TRUE, eval=FALSE}
 
 beaver2[max(beaver2$temp), ] #not correct!
 max(beaver2$temp) #returns maximum temperature value
@@ -240,7 +240,7 @@ Try again with `which.max()`.
 
 Here, we can use the graphing function included in the documentation to look at body temperature (`temp`) over the time of the study (progressive hours calculated using `day` and `time`). This function also includes a line showing presumably the high end of normal body temp (the `abline` line) and circles points where the beaver is noted as active (red circles, `points` line -- `col = 2` corresponds to red).
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, eval=FALSE}
 
 beaver.plot <- function(bdat, ...) {
   nam <- deparse(substitute(bdat))
@@ -298,7 +298,7 @@ vect1
 # 5. Working with the tidyverse {.unnumbered}
 
 Installing packages:
-```{r, eval=FALSE}
+```{r, eval=FALSE, echo=TRUE}
 
 #install.packages(“tidyverse”)
 library(tidyverse)
@@ -325,7 +325,7 @@ starwars %>%
 
 ## ggplot2 graphing example {.unnumbered}
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, eval=FALSE}
 
 library(ggplot2)
 ggplot(beaver2,  
